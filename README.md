@@ -2,6 +2,4 @@
 
 Assignment for school / Gaming shop website
 This is going to become my website for Game shopping.
-This is gonna be the greatest of websites
-
-Folders, styles, js and images have been created trough VScode
+GameHub
