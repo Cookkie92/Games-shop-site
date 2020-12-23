@@ -1,14 +1,59 @@
-.Console__logo1 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+header {
+  background: #909297;
 }
+nav {
+  float: right;
+  padding: 10px;
+  font-size: 1.5em;
+  display: block;
+  padding-top: 40px;
+}
+.currentsite {
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+nav a {
+  padding: 10px;
+  text-decoration: none;
+  color: #1b203d;
+}
+nav ul {
+  padding: 0px;
+  display: flex;
+}
+nav li {
+  display: inline;
+}
+
 .logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 250px;
 }
-/* tar dette i slutten */
+.console-logo {
+  max-width: 200px;
+  max-height: 50px;
+}
+.game-pics {
+  max-width: 100px;
+}
+.genre {
+  padding: 10px;
+  text-decoration: none;
+  color: #1b203d;
+  display: inline;
+  background-color: #909297;
+}
+li {
+  display: inline;
+}
 footer {
   text-align: center;
+  background-color: #909297;
+}
+.featured {
+  background-color: #909297;
+}
+.headline {
+  background-color: #909297;
 }
