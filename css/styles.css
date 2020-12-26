@@ -96,7 +96,7 @@ body {
   padding: 1px;
   background-clip: padding-box;
   max-width: 800px;
-  border-radius: 10px;
+  border-radius: 25px;
   float: center;
 }
 li {
@@ -112,7 +112,7 @@ li {
   padding: 1px;
   background-clip: padding-box;
   max-width: 600px;
-  border-radius: 10px;
+  border-radius: 25px;
 }
 .headline {
   margin: 0 auto;
@@ -124,7 +124,7 @@ li {
   padding: 10px;
   background-clip: padding-box;
   max-width: 800px;
-  border-radius: 10px;
+  border-radius: 25px;
 }
 .buybutton {
   border: groove 1px black;
