@@ -1,12 +1,22 @@
+@font-face {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/*Top*/
+
 header {
-  background: #909297;
+  border-color: #1b203d;
+  border-style: double;
+  border-radius: 20px;
+  background: white;
+  padding: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 nav {
   float: right;
   padding: 10px;
   font-size: 1.5em;
   display: block;
-  padding-top: 40px;
+  padding-top: 90px;
 }
 .currentsite {
   font-weight: bold;
@@ -20,40 +30,121 @@ nav a {
   color: #1b203d;
 }
 nav ul {
-  padding: 0px;
+  padding: 5px;
   display: flex;
 }
 nav li {
   display: inline;
 }
-
 .logo {
-  max-width: 250px;
+  max-width: 400px;
+  max-height: 250px;
+  padding: 0;
+  background-color: transparent;
 }
+.iconbuttons {
+  margin-right: 20px;
+}
+.search {
+  margin-right: 25px;
+  margin-bottom: 52px;
+}
+.searchbutton:hover {
+  text-decoration: underline;
+  background: darkgreen;
+  border: dotted black 1px;
+  width: 40px;
+  height: 25px;
+}
+.searchbutton {
+  text-decoration: underline;
+  background: crimson;
+  border: dotted black 1px;
+  width: 40px;
+  height: 25px;
+}
+/*Top*/
+/*Middle*/
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url("../Images/multiplayer-1576688681.jpg");
+}
+
 .console-logo {
   max-width: 200px;
-  max-height: 50px;
+  max-height: 100px;
 }
 .game-pics {
-  max-width: 100px;
+  border-radius: 20px;
+  float: left;
 }
 .genre {
+  display: flex;
+  font-weight: bold;
   padding: 10px;
   text-decoration: none;
   color: #1b203d;
   display: inline;
-  background-color: #909297;
+}
+.genres {
+  margin: 5px;
+  text-align: center;
+  color: #1b203d;
+  background: white;
+  overflow: hidden;
+  border: 1px groove #1b203d;
+  padding: 1px;
+  background-clip: padding-box;
+  max-width: 600px;
+  border-radius: 10px;
+  float: center;
 }
 li {
   display: inline;
 }
-footer {
-  text-align: center;
-  background-color: #909297;
-}
 .featured {
-  background-color: #909297;
+  margin: 5px;
+  text-align: center;
+  color: #1b203d;
+  background: white;
+  overflow: hidden;
+  border: 1px groove #1b203d;
+  padding: 1px;
+  background-clip: padding-box;
+  max-width: 400px;
+  border-radius: 10px;
 }
 .headline {
-  background-color: #909297;
+  font-family:sans-serif
+  margin:5px;
+  text-align: center;
+  color: #1b203d;
+  background: white;
+  overflow: hidden;
+  border: 1px groove #1b203d;
+  padding: 10px;
+  background-clip: padding-box;
+  max-width: 600px;
+  border-radius: 10px;
 }
+.buybutton {
+  border: groove 1px black;
+  padding: 0.5px 20px;
+  border-radius: 8px;
+  background-color: red;
+  color: white;
+  font-size: 1em;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/*Middle*/
+/*bottom*/
+
+footer {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+/*bottom*/
