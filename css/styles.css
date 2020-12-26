@@ -87,7 +87,7 @@ body {
   display: inline;
 }
 .genres {
-  margin: 0 auto;
+  margin: 10px auto;
   text-align: center;
   color: #1b203d;
   background: darkorange;
@@ -95,7 +95,7 @@ body {
   border: 1px groove #1b203d;
   padding: 1px;
   background-clip: padding-box;
-  max-width: 600px;
+  max-width: 800px;
   border-radius: 10px;
   float: center;
 }
@@ -123,7 +123,7 @@ li {
   border: 1px groove #1b203d;
   padding: 10px;
   background-clip: padding-box;
-  max-width: 600px;
+  max-width: 800px;
   border-radius: 10px;
 }
 .buybutton {
