@@ -87,10 +87,10 @@ body {
   display: inline;
 }
 .genres {
-  margin: 5px;
+  margin: 0 auto;
   text-align: center;
   color: #1b203d;
-  background:darkorange;
+  background: darkorange;
   overflow: hidden;
   border: 1px groove #1b203d;
   padding: 1px;
@@ -103,10 +103,10 @@ li {
   display: inline;
 }
 .featured {
-  margin: 5px;
+  margin: 0 auto;
   text-align: center;
   color: #1b203d;
-  background:darkorange;
+  background: darkorange;
   overflow: hidden;
   border: 1px groove #1b203d;
   padding: 1px;
@@ -115,11 +115,10 @@ li {
   border-radius: 10px;
 }
 .headline {
-  font-family:sans-serif
-  margin:5px;
+  margin: 0 auto;
   text-align: center;
   color: #1b203d;
-  background:darkorange;
+  background: darkorange;
   overflow: hidden;
   border: 1px groove #1b203d;
   padding: 10px;
