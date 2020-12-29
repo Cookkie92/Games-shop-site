@@ -120,6 +120,7 @@ li {
   background-clip: padding-box;
   max-width: 600px;
   border-radius: 25px;
+  display: ;
 }
 .headline {
   margin: 0 auto;
