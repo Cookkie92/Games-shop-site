@@ -4,13 +4,12 @@
 /*Top*/
 
 header {
-  border-color: #1b203d;
-  border-style: double;
-  border-radius: 20px;
-  background: darkorange;
-  padding: 10px;
+  border-radius: 10px;
+  background: #f7f7f7;
+  padding: 1px;
 }
 nav {
+  max-width: 1100px;
   float: right;
   padding: 10px;
   font-size: 1.5em;
@@ -43,6 +42,8 @@ nav li {
 }
 .iconbuttons {
   margin-right: 20px;
+  padding: 10px;
+  max-width: 30px;
 }
 .search {
   margin-right: 25px;
@@ -64,6 +65,19 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-image: url("../Images/background1\ \(1\).png");
 }
+.searchbutton:hover {
+  background: darkgreen;
+}
+
+.searchbutton {
+  background-clip: padding-box;
+  margin: 5px auto;
+  text-decoration: underline;
+  background: crimson;
+  width: 40px;
+  height: 25px;
+}
+
 .gamesbody {
   background: url("../Images/multiplayer-1576688681.jpg");
 }
@@ -74,6 +88,7 @@ body {
   margin-top: 0.1px;
 }
 .game-pics {
+  margin-left: 10px;
   border-radius: 20px;
   float: left;
 }
@@ -92,48 +107,44 @@ body {
   margin: 10px auto;
   text-align: center;
   color: #1b203d;
-  background: darkorange;
+  background: #f7f7f7;
   overflow: hidden;
-  border: 1px groove #1b203d;
   padding: 1px;
   background-clip: padding-box;
   max-width: 800px;
-  border-radius: 25px;
+  border-radius: 10px;
   float: center;
 }
 li {
   display: inline;
 }
 .featured {
-  margin: 0 auto;
+  margin: 10px auto;
   text-align: center;
-  color: white;
-  background: #401a09;
+  color: #1b203d;
+  background: #f7f7f7;
   overflow: hidden;
-  border: 1px groove #1b203d;
   padding: 1px;
   background-clip: padding-box;
   max-width: 600px;
-  border-radius: 25px;
-  display: ;
+  border-radius: 10px;
 }
 .headline {
-  margin: 0 auto;
+  margin: 10px auto;
   text-align: center;
   color: #1b203d;
-  background: darkorange;
+  background: #f7f7f7;
   overflow: hidden;
-  border: 1px groove #1b203d;
   padding: 10px;
   background-clip: padding-box;
   max-width: 800px;
-  border-radius: 25px;
+  border-radius: 10px;
 }
 .buybutton {
   border: groove 1px black;
   padding: 0.5px 20px;
   border-radius: 8px;
-  background-color: red;
+  background-color: #ff9a03;
   color: white;
   font-size: 1em;
   text-decoration: none;
@@ -142,9 +153,12 @@ li {
 /*bottom*/
 
 footer {
+  margin: 10px;
   text-align: center;
   font-weight: bold;
-  color: whitesmoke;
+  color: #1b203d;
+  background-color: #f7f7f7;
+  border-radius: 10px;
 }
 
 /*bottom*/
