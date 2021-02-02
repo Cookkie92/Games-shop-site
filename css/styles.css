@@ -50,11 +50,7 @@ nav li {
   margin-bottom: 52px;
 }
 .searchbutton:hover {
-  text-decoration: underline;
   background: darkgreen;
-  border: dotted black 1px;
-  width: 40px;
-  height: 25px;
 }
 .searchbutton {
   text-decoration: underline;
