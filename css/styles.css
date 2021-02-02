@@ -9,7 +9,6 @@ header {
   border-radius: 20px;
   background: darkorange;
   padding: 10px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 nav {
   float: right;
@@ -138,13 +137,11 @@ li {
   color: white;
   font-size: 1em;
   text-decoration: none;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 /*Middle*/
 /*bottom*/
 
 footer {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   font-weight: bold;
   color: whitesmoke;
