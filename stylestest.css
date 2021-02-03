@@ -16,7 +16,6 @@ nav {
   background-color: #5b4563;
   font-family: "Ubuntu", sans-serif;
 }
-
 .logo {
   color: #ffffff;
   text-transform: uppercase;
@@ -55,6 +54,24 @@ a {
   transition: all 0.3s ease;
 }
 /*Main*/
+body {
+  background-color: rgb(223, 223, 223);
+  background: url(/Images/GameHub_Logo_rezized.png);
+  background-position: top;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+p {
+  font-style: italic;
+  font-weight: bold;
+}
+.best-seller {
+  height: 300px;
+  width: 550px;
+  border-radius: 5px;
+}
 .genre {
   display: flex;
   font-weight: bold;
@@ -77,44 +94,72 @@ a {
   float: center;
 }
 .featured {
-  margin: 10px auto;
-  text-align: center;
+  margin: 15px;
+  text-align: bottom;
   color: #1b203d;
-  background: #dbdbdb;
-  overflow: hidden;
+  background: rgb(223, 223, 223);
   padding: 1px;
   background-clip: padding-box;
-  max-width: 600px;
+  width: 500px;
   border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  display: inline-flex;
+  text-decoration: dashed;
+  align-items: center;
+}
+.game-pics {
+  border-radius: 20px;
+  width: 200px;
+  height: 140px;
 }
 .headline {
-  margin: 10px auto;
   text-align: center;
   color: #1b203d;
-  background: #dbdbdb;
   overflow: hidden;
-  padding: 10px;
   background-clip: padding-box;
-  max-width: 800px;
+  max-width: 600px;
+  margin: 30px 30px 30px;
+  background-color: rgb(223, 223, 223);
   border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+.headline-text {
+  font-size: 30px;
+  font-family: "Black Ops One", cursive;
+  background-color: #5b4563;
+  color: rgb(223, 223, 223);
+  border-radius: 5px;
+  margin: 5px;
+}
+.buybutton-headline {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: rgb(53, 139, 53);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  border: 1px white solid;
+  font-weight: bold;
 }
 .buybutton {
-  border: groove 1px black;
-  padding: 0.5px 20px;
-  border-radius: 8px;
-  background-color: #ff9a03;
+  float: right;
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: rgb(53, 139, 53);
   color: white;
-  font-size: 1em;
-  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  border: 1px white solid;
+  font-weight: bold;
+}
+.buybutton:hover {
+  transform: scale(0.98);
 }
 body {
   font-family: "Ubuntu", sans-serif;
-  background: url("./Images/background1\ \(1\).png");
-}
-.game-pics {
-  margin-left: 10px;
-  border-radius: 20px;
-  float: left;
 }
 li {
   display: inline;

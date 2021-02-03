@@ -1,96 +1,74 @@
-@font-face {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-/*Top*/
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Press+Start+2P&display=swap");
 
-header {
-  border-radius: 10px;
-  background: #f7f7f7;
-  padding: 1px;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
+/*Navigation/top*/
 nav {
-  max-width: 1100px;
-  float: right;
-  padding: 10px;
-  font-size: 1.5em;
-  display: block;
-  padding-top: 90px;
-}
-.currentsite {
-  font-weight: bold;
-}
-nav a:hover {
-  text-decoration: underline;
-}
-nav a {
-  padding: 10px;
-  text-decoration: none;
-  color: #1b203d;
-}
-nav ul {
-  padding: 5px;
   display: flex;
-}
-nav li {
-  display: inline;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #5b4563;
+  font-family: "Ubuntu", sans-serif;
 }
 .logo {
-  max-width: 400px;
-  max-height: 250px;
-  padding: 0;
-  background-color: transparent;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 30px;
+  font-family: "Black Ops One", cursive;
 }
-.iconbuttons {
-  margin-right: 20px;
-  padding: 10px;
-  max-width: 30px;
+a {
+  text-decoration: none;
+  color: #ffffff;
 }
-.search {
-  margin-right: 25px;
-  margin-bottom: 52px;
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
 }
-.searchbutton:hover {
-  background: darkgreen;
+.nav-links li {
+  list-style: none;
 }
-.searchbutton {
-  text-decoration: underline;
-  background: crimson;
-  border: dotted black 1px;
-  width: 40px;
-  height: 25px;
+.nav-links a {
+  color: #d8d7d9;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 13px;
 }
-/*Top*/
-/*Middle*/
-body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-image: url("../Images/background1\ \(1\).png");
+.burgermenu {
+  display: none;
+  cursor: pointer;
 }
-.searchbutton:hover {
-  background: darkgreen;
+.burgermenu div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
 }
-
-.searchbutton {
-  background-clip: padding-box;
-  margin: 5px auto;
-  text-decoration: underline;
-  background: crimson;
-  width: 40px;
-  height: 25px;
-}
-
+/*Main*/
 .gamesbody {
   background: url("../Images/multiplayer-1576688681.jpg");
 }
-
-.console-logo {
-  max-width: 300px;
-  max-height: 40px;
-  margin-top: 0.1px;
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
-.game-pics {
-  margin-left: 10px;
-  border-radius: 20px;
-  float: left;
+p {
+  font-style: italic;
+  font-weight: bold;
+}
+.best-seller {
+  height: 300px;
+  width: 550px;
+  border-radius: 5px;
 }
 .genre {
   display: flex;
@@ -99,15 +77,13 @@ body {
   text-decoration: none;
   color: #1b203d;
   display: inline;
-}
-.genre:hover {
-  text-decoration: underline;
+  margin: 5px;
 }
 .genres {
   margin: 10px auto;
   text-align: center;
   color: #1b203d;
-  background: #f7f7f7;
+  background: #dbdbdb;
   overflow: hidden;
   padding: 1px;
   background-clip: padding-box;
@@ -115,50 +91,149 @@ body {
   border-radius: 10px;
   float: center;
 }
+.featured {
+  margin: 15px;
+  text-align: bottom;
+  color: #1b203d;
+  background: rgb(223, 223, 223);
+  padding: 1px;
+  background-clip: padding-box;
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  display: inline-flex;
+  text-decoration: dashed;
+  align-items: center;
+}
+.game-pics {
+  border-radius: 20px;
+  width: 200px;
+  height: 140px;
+}
+.headline {
+  text-align: center;
+  color: #1b203d;
+  overflow: hidden;
+  background-clip: padding-box;
+  max-width: 600px;
+  margin: 30px 30px 30px;
+  background-color: rgb(223, 223, 223);
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+.headline-text {
+  font-size: 30px;
+  font-family: "Black Ops One", cursive;
+  background-color: #5b4563;
+  color: rgb(223, 223, 223);
+  border-radius: 5px;
+  margin: 5px;
+}
+.buybutton-headline {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: rgb(53, 139, 53);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  border: 1px white solid;
+  font-weight: bold;
+}
+.buybutton {
+  float: right;
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: rgb(53, 139, 53);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  border: 1px white solid;
+  font-weight: bold;
+}
+.buybutton:hover {
+  transform: scale(0.98);
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+}
 li {
   display: inline;
 }
-.featured {
-  margin: 10px auto;
-  text-align: center;
-  color: #1b203d;
-  background: #f7f7f7;
-  overflow: hidden;
-  padding: 1px;
-  background-clip: padding-box;
-  max-width: 600px;
-  border-radius: 10px;
+.genre:hover {
+  text-decoration: underline;
 }
-.headline {
-  margin: 10px auto;
-  text-align: center;
-  color: #1b203d;
-  background: #f7f7f7;
-  overflow: hidden;
-  padding: 10px;
-  background-clip: padding-box;
-  max-width: 800px;
-  border-radius: 10px;
-}
-.buybutton {
-  border: groove 1px black;
-  padding: 0.5px 20px;
-  border-radius: 8px;
-  background-color: #ff9a03;
-  color: white;
-  font-size: 1em;
-  text-decoration: none;
-}
-/*Middle*/
-/*bottom*/
 
+/*Footer*/
 footer {
-  margin: 10px;
-  text-align: center;
+  background-color: #5b4563;
+  align-items: center;
+  justify-content: space-around;
   font-weight: bold;
-  color: #1b203d;
-  background-color: #f7f7f7;
-  border-radius: 10px;
+  color: white;
+  display: flex;
+}
+.console-logo {
+  max-width: 300px;
+  max-height: 40px;
+  margin-top: 0.1px;
 }
 
-/*bottom*/
+/*ipad/mobile*/
+
+@media (max-width: 1024px) {
+  .nav-links {
+    width: 55%;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #5b4563;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    transform: translateX(100%);
+    transition: transform 0.5 ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burgermenu {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(+45deg) translate(-5px, -6px);
+}
