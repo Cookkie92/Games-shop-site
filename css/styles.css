@@ -224,37 +224,12 @@ footer {
   .best-seller {
     height: 150px;
     width: 300px;
-    border-radius: 5px;
   }
   .featured {
-    margin:15px auto;
-    text-align: bottom;
-    color: rgb(223, 223, 223);
-    background: rgb(22, 22, 22);
-    padding: 1px;
-    background-clip: padding-box;
     width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    display
-    text-decoration: dashed;
-    align-items: center;
-    float: center;
-    border: 1px white solid ;
   }
 
     .buybutton {
-      display: inline-block;
-      padding: 10px 30px;
-      cursor: pointer;
-      background: rgb(53, 139, 53);
-      color: white;
-      border: none;
-      border-radius: 5px;
-      border: 1px white solid;
-      font-weight: bold;
-      position:relative;
-      bottom:130px;
       left:200px;
     }
 }
