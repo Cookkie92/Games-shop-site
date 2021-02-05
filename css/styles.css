@@ -247,3 +247,8 @@ footer {
 .toggle .line3 {
   transform: rotate(+45deg) translate(-5px, -6px);
 }
+.best-seller {
+  height: 150px;
+  width: 300px;
+  border-radius: 5px;
+}
