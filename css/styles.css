@@ -173,6 +173,7 @@ p {
   bottom: 80px;
   left: 280px;
 }
+
 .buybutton:hover {
   transform: scale(0.98);
 }
@@ -317,6 +318,10 @@ footer {
 
   .buybutton {
     left: 200px;
+  }
+  .buybutton-shop {
+    bottom: 80px;
+    left: 180px;
   }
 }
 
