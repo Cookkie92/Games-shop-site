@@ -159,6 +159,20 @@ p {
   bottom: 130px;
   left: 300px;
 }
+.buybutton-shop {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: rgb(53, 139, 53);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  border: 1px white solid;
+  font-weight: bold;
+  position: relative;
+  bottom: 80px;
+  left: 280px;
+}
 .buybutton:hover {
   transform: scale(0.98);
 }
@@ -201,27 +215,6 @@ li {
   border: 0;
   outline: none;
   position: relative;
-}
-#btn {
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 110px;
-  height: 100%;
-  background: linear-gradient(right, #c97901, #c51919);
-  border-radius: 30px;
-  transition: 0.5s;
-}
-.social-icons {
-  margin: 30px auto;
-  text-align: center;
-}
-.social-icons img {
-  width: 30px;
-  margin: 0 12px;
-  box-shadow: 0 0 20px 0 #5b4563;
-  cursor: pointer;
-  border-radius: 50%;
 }
 .main-creatacc {
   color: rgb(22, 22, 22);
@@ -267,9 +260,6 @@ span {
 }
 #register {
   left: 50px;
-}
-#login {
-  left: 450px;
 }
 
 /*Footer*/
