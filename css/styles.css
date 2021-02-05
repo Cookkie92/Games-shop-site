@@ -77,8 +77,7 @@ p {
   color: rgb(223, 223, 223);
   display: inline;
   margin: 5px auto;
-  float:center
-  ;
+  float: center;
 }
 .genres {
   margin: 10px auto;
@@ -93,26 +92,42 @@ p {
   float: center;
 }
 .featured {
-  margin:15px auto;
+  margin: 15px auto;
   text-align: bottom;
   color: rgb(223, 223, 223);
   background: rgb(22, 22, 22);
   padding: 1px;
   background-clip: padding-box;
   width: 500px;
+  height: 200px;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  display
   text-decoration: dashed;
   align-items: center;
   float: center;
-  border: 1px white solid ;
+  border: 1px white solid;
+}
+.featured-games {
+  margin: ;
+  text-align: bottom;
+  color: rgb(223, 223, 223);
+  background: rgb(22, 22, 22);
+  padding: 1px;
+  background-clip: padding-box;
+  width: 350px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  text-decoration: dashed;
+  align-items: centr;
+  border: 1px white solid;
+  display: inline-flex;
 }
 .game-pics {
   border-radius: 20px;
   width: 200px;
   height: 140px;
-  padding:5px;
+  padding: 5px;
 }
 .headline {
   text-align: center;
@@ -146,7 +161,7 @@ p {
   border: 1px white solid;
   font-weight: bold;
 }
-.buybutton {;
+.buybutton {
   display: inline-block;
   padding: 10px 30px;
   cursor: pointer;
@@ -156,9 +171,9 @@ p {
   border-radius: 5px;
   border: 1px white solid;
   font-weight: bold;
-  position:relative;
-  bottom:130px;
-  left:300px;
+  position: relative;
+  bottom: 130px;
+  left: 300px;
 }
 .buybutton:hover {
   transform: scale(0.98);
@@ -229,9 +244,9 @@ footer {
     width: 300px;
   }
 
-    .buybutton {
-      left:200px;
-    }
+  .buybutton {
+    left: 200px;
+  }
 }
 
 .nav-active {
