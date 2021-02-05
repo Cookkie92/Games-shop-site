@@ -107,22 +107,6 @@ p {
   float: center;
   border: 1px white solid;
 }
-.featured-games {
-  margin: ;
-  text-align: bottom;
-  color: rgb(223, 223, 223);
-  background: rgb(22, 22, 22);
-  padding: 1px;
-  background-clip: padding-box;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  text-decoration: dashed;
-  align-items: centr;
-  border: 1px white solid;
-  display: inline-flex;
-}
 .game-pics {
   border-radius: 20px;
   width: 200px;
