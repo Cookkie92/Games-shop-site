@@ -336,9 +336,7 @@ footer {
 
   }
   .game-logo {
-    position: relative;
-    right: 240px;
-    width:;
+    display:none;
 }
 
 .nav-active {
