@@ -64,6 +64,14 @@ p {
   font-style: italic;
   font-weight: bold;
 }
+.game-logo {
+  position: relative;
+  right: 170px;
+  bottom: 150px;
+}
+.headline-picture {
+  background: url("../Images/darkcity.jpg");
+}
 .best-seller {
   height: 300px;
   width: 550px;
@@ -133,6 +141,7 @@ p {
   color: rgb(223, 223, 223);
   border-radius: 5px;
   margin: 5px;
+  text-align: center;
 }
 .buybutton-headline {
   display: inline-block;
