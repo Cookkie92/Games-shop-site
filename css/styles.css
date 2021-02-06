@@ -333,11 +333,14 @@ footer {
     left: 180px;
   }
   .headline-picture{
-
+    background: url("../Images/Background.jpg");
+    align-items:center;
   }
   .game-logo {
-    display:none;
+    background: url("../Images/headlinepic13.jpg");
+    float:center;
 }
+
 
 .nav-active {
   transform: translateX(0%);
