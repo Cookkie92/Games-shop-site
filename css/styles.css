@@ -337,7 +337,11 @@ footer {
     align-items:center;
   }
   .game-logo {
-    float:center;
+    height:400px;
+    width:800px;
+    right:100px;
+    bottom:100px;
+
 }
 
 
