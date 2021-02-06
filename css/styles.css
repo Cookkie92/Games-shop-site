@@ -342,6 +342,7 @@ footer {
   }
   .burgermenu {
     display: block;
+    z-index:9999;
   }
   .best-seller {
     height: 150px;
