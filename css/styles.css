@@ -53,6 +53,9 @@ a {
   margin: 5px;
   transition: all 0.3s ease;
 }
+.currentsite{
+  text-decoration: underline;
+}
 /*Main*/
 .gamesbody {
   background: url("../Images/multiplayer-1576688681.jpg");
