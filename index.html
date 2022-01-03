@@ -13,22 +13,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gamehub | Home</title>
-    <!-- Hotjar Tracking Code for https://goofy-tesla-8ce2a4.netlify.app/index.html -->
-    <script>
-      (function (h, o, t, j, a, r) {
-        h.hj =
-          h.hj ||
-          function () {
-            (h.hj.q = h.hj.q || []).push(arguments);
-          };
-        h._hjSettings = { hjid: 2749966, hjsv: 6 };
-        a = o.getElementsByTagName("head")[0];
-        r = o.createElement("script");
-        r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-    </script>
   </head>
   <body>
     <header>
@@ -39,14 +23,9 @@
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="games.html">Games</a></li>
+          <li><a href="cart.html">Cart</a></li>
           <li><a href="account.html">Log In </a></li>
-          <li><a href="createacc.html"> Create Account </a></li>
         </ul>
-        <div class="burgermenu">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
       </nav>
     </header>
     <main>
@@ -64,53 +43,9 @@
           </section>
 
           <section>
-            <div class="headline">
-              <h2 class="headline-text">Best seller</h2>
-              <img
-                src="Images/05R5gjuXF0uzXHWU8zQxywy-1.1588954598.fit_lim.size_1200x630.jpg"
-                class="best-seller"
-              />
-              <h3>Grand left auto 6</h3>
-              <p>Only $59.99</p>
-              <p>
-                <a class="buybutton-headline" href="cart.html"> Epic BUY </a>
-              </p>
-            </div>
-          </section>
-
-          <section class="genres">
-            <h2>Genres</h2>
-            <div>
-              <ul>
-                <li><a href="games.html" class="genre"> Adventure/</a></li>
-                <li><a href="games.html" class="genre"> MMO-RPG/</a></li>
-                <li><a href="games.html" class="genre"> First person/</a></li>
-                <li><a href="games.html" class="genre"> Sandbox/</a></li>
-              </ul>
-            </div>
-          </section>
-
-          <section>
-            <div class="featured">
-              <img src="Images/images.jpg" class="game-pics" />
-              <h3>Mineklaft 5</h3>
-              <p>$2.99</p>
-              <p><a class="buybutton" href="cart.html"> BUY </a></p>
-            </div>
-            <div class="featured">
-              <img
-                src="Images/05R5gjuXF0uzXHWU8zQxywy-1.1588954598.fit_lim.size_1200x630.jpg"
-                class="game-pics"
-              />
-              <h3>Racecar sim 2</h3>
-              <p>$59</p>
-              <p><a class="buybutton" href="cart.html"> BUY </a></p>
-            </div>
-            <div class="featured">
-              <img src="Images/doge1-1280x720.jpg" class="game-pics" />
-              <h3>Doge to the moon!</h3>
-              <p>$2.99</p>
-              <p><a class="buybutton" href="cart.html"> BUY </a></p>
+            <div class="top-games">
+              <h2 class="headline-text">Best sellers</h2>
+              <div class="inner-headline"></div>
             </div>
           </section>
         </div>
@@ -123,6 +58,6 @@
       <p>Location: Haugesund, Norway | l33tstr33t 1337</p>
       Copyright &copy;
     </footer>
-    <script src="burger.js"></script>
+    <script src="js/bestseller.js"></script>
   </body>
 </html>
