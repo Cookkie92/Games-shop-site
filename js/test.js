@@ -1,27 +1,52 @@
-fetch("https://rawg-video-games-database.p.rapidapi.com/games", {
-  method: "GET",
-  headers: {
-    "x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com",
-    "x-rapidapi-key": "a80672ee60msh8679bffac93f402p1f8093jsnd8eb05bce674",
-  },
-})
-  .then((response) => response.json())
-  .then((data) => {
-    try {
-      const games = data;
-      console.log(games);
-      //   resaultContainer.innerHTML = "";
-      for (let i = 0; i < games.length; i++) {
-        if (i === 5) {
-          break;
-        }
+const url =
+  "https://api.rawg.io/api/games?&key=2904233664034c1da06563d6fd16478c";
 
-        resaultContainer.innerHTML += ``;
+const resultContainer = document.querySelector(".result");
+
+async function getApi() {
+  // checking for errors with try
+  try {
+    //connecting to API
+    const response = await fetch(url);
+
+    const result = await response.json();
+    console.log(result);
+    //finding the info
+    const games = result.results;
+    //displaying loader
+    resultContainer.innerHTML = "";
+
+    for (let i = 0; i < games.length; i++) {
+      //counting number of tags
+      //games[i].tags.length = counts the number of tags
+
+      if (i === 20) {
+        //stops after 8 has been reached
+        break;
       }
-    } catch (error) {
-      console.warn("Something went wrong", error);
-      resaultContainer.innerHTML += `
-      <h3 class="logo">Something Went Wrong!</h3>
-    `;
+
+      //deploying the info
+      resultContainer.innerHTML += `
+      <div class ="result">
+      <a href="details.html?id=${games[i].id}">
+      <div class = "inner-result">
+       
+        <img class="image" src="${games[i].background_image}"  alt="thumbnail">
+        <h3 class="logo">${games[i].name}</h3>
+        <p>Price: ${games[i].rating} Doge</p>
+        
+         </div>
+         </a>
+      </div>
+      
+      `;
     }
-  });
+
+    // catching error
+  } catch (error) {
+    console.log("error occured", error);
+    resultContainer.innerHTML = "This didnt go as planned";
+  }
+}
+
+getApi();
