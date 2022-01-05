@@ -354,6 +354,36 @@ li {
   left: 50px;
 }
 
+/*Contact form*/
+.error-form {
+  display: none;
+  color: red;
+  font-size: 12px;
+  padding: 5px;
+  letter-spacing: 2px;
+}
+.contact-container {
+  max-width: 550px;
+  align-items: center;
+  margin: 0 auto;
+  padding: 190px;
+  border-radius: 20px;
+}
+#contactForm {
+  display: grid;
+  grid-row-gap: 15px;
+  text-align: center;
+  padding: 10px;
+}
+.contact-inputs {
+  padding: 20px;
+  width: 300px;
+  border-radius: 5px;
+}
+#sucess {
+  display: none;
+  color: green;
+}
 /*Footer*/
 
 
@@ -419,5 +449,4 @@ footer {
     width:800px;
     right:230px;
     bottom:120px;
-
 }

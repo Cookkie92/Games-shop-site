@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <title>Contact us</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <h3><a href="index.html">Game|Hub</a></h3>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="account.html">Log In </a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="contact-container">
+      <div id="sucess"><h3>Sucess</h3></div>
+      <form id="contactForm">
+        <div>
+          <input
+            class="contact-inputs"
+            name="firstname"
+            id="name"
+            placeholder="Name"
+          />
+          <div class="error-form" id="nameError">Required</div>
+        </div>
+        <div>
+          <input
+            class="contact-inputs"
+            name="subject"
+            id="subject"
+            placeholder="Subject"
+          />
+          <div class="error-form" id="subjectError">
+            Must have atlest 10 characters.
+          </div>
+        </div>
+        <div>
+          <input
+            class="contact-inputs"
+            name="email"
+            id="email"
+            placeholder="Email"
+          />
+          <div class="error-form" id="emailError">Enter Valid Email</div>
+        </div>
+        <div>
+          <input
+            class="contact-inputs"
+            name="adress"
+            id="adress"
+            placeholder="Adress"
+          />
+          <div class="error-form" id="adressError">25 Characters Required</div>
+        </div>
+        <div class="btn-container">
+          <button class="start-btn">Submit</button>
+        </div>
+      </form>
+    </main>
+    <footer>
+        <div>
+          <img src="Images/0.jpg" class="console-logo" />
+        </div>
+        <p>Location: Haugesund, Norway | l33tstr33t 1337</p>
+        Copyright &copy;
+      </footer class="games-footer">
+    <script src="js/contact.js"></script>
+  </body>
+</html>
