@@ -67,7 +67,6 @@ function showCartNum() {
 
 //Legger item i local storage
 function cartNum(games) {
-  console.log("product clicked is", games);
   let gameNumbers = localStorage.getItem("cartNum");
 
   gameNumbers = parseInt(gameNumbers);
