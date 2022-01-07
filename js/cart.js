@@ -132,6 +132,7 @@ function getCart() {
   let cartItems = localStorage.getItem("gamesInCart");
   cartItems = JSON.parse(cartItems);
   let cartContainer = document.querySelector(".games");
+  let cartSum = localStorage.getItem("totalSum");
   console.log(cartItems);
   if (cartItems && cartContainer) {
     cartContainer.innerHTML = "";
@@ -153,6 +154,16 @@ function getCart() {
       </div>
       `;
     });
+
+    cartContainer.innerHTML += `
+    <div class="totalSumContainer">
+      <h4 class="totalSumText">
+      Total Sum: </h4>
+      <h4 class="totalSum">
+         $${cartSum}
+      </h4>
+      </div>
+    `;
   }
 }
 

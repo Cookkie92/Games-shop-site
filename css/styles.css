@@ -249,6 +249,18 @@ align-items:center;
   width:100px;
   height:100px;
 } */
+.totalSumContainer{
+  display:flex;
+  justify-content: flex-end;
+  width:100%;
+  padding:10px 0;
+}
+.totalSumText{
+  width:15%;
+}
+.totalSum{
+  width:25%;
+}
 /*Buy buttons*/
 
 .start-btn:hover {
