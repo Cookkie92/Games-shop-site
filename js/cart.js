@@ -179,11 +179,11 @@ function getCart() {
   }
 }
 //Må fiksa så faen på denna her, heilt feil variablar
-function changeQnty(action, id) {
+function changeQnty(action, inCart) {
   cartItems = cartItems.map((item) => {
     let oldNumQnty = item.inCart;
 
-    if (item.id === id) {
+    if (item.inCart === inCart) {
       if (action === "minus") {
         oldNumQnty--;
       } else if (action === "plus") {
@@ -192,10 +192,9 @@ function changeQnty(action, id) {
     }
     return {
       ...item,
-      gameNumber: oldNumQnty,
+      inCart: oldNumQnty,
     };
   });
-  showCartNum();
 }
 
 showCartNum();
