@@ -128,4 +128,25 @@ function totalSum(games) {
   }
 }
 
+function getCart() {
+  let cartItems = localStorage.getItem("gamesInCart");
+  cartItems = JSON.parse(cartItems);
+  let cartContainer = document.querySelector(".games");
+  console.log(cartItems);
+  if (cartItems && cartContainer) {
+    cartContainer.innerHTML = "";
+    Object.values(cartItems).map((item) => {
+      cartContainer.innerHTML += `
+      <div class="game">
+      <i class="fas fa-ban"></i>
+      <img class="cart-pic" src="/Images/${item.thumbnail}.jpg">
+      <span>${item.title}<span>
+      </div>
+      <div class="price">$${item.price}</div>
+      `;
+    });
+  }
+}
+
 showCartNum();
+getCart();

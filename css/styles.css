@@ -229,14 +229,26 @@ display:flex;
 align-items:center;
 
 }
-.games{
+.game{
   width:45%;
   display:flex;
   justify-content:space-around;
   align-items:center;
-  padding:10px 0;
+  padding:20px 0;
   border-bottom:1px solid green;
 }
+.games{
+  width: 100%;
+  display: flex;
+  flex-wrap:wrap;
+}
+.games img{
+  width:75px;
+}
+/* .cart-pic{
+  width:100px;
+  height:100px;
+} */
 /*Buy buttons*/
 
 .start-btn:hover {
