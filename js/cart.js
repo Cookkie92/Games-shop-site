@@ -2,6 +2,7 @@ let carts = document.querySelectorAll(".add-cart");
 
 let games = [
   {
+    id: 0,
     title: "Mineklaft 5",
     description: "Create mineshafts",
     thumbnail: "Mineklaft",
@@ -9,6 +10,7 @@ let games = [
     inCart: 0,
   },
   {
+    id: 1,
     title: "Dogeface 2",
     description: "Explore the dogeface",
     thumbnail: "doge",
@@ -16,6 +18,7 @@ let games = [
     inCart: 0,
   },
   {
+    id: 2,
     title: "Fragfrog",
     description: "Destroy everyone",
     thumbnail: "fragfrog",
@@ -23,6 +26,7 @@ let games = [
     inCart: 0,
   },
   {
+    id: 3,
     title: "You Lose 9",
     description: "You cannot win this game",
     thumbnail: "youlose",
@@ -30,6 +34,7 @@ let games = [
     inCart: 0,
   },
   {
+    id: 4,
     title: "Racecar sim 2",
     description: "Compete in races with your friends",
     thumbnail: "racecarsim",
@@ -37,6 +42,7 @@ let games = [
     inCart: 0,
   },
   {
+    id: 5,
     title: "Polkamon",
     description: "Teach wierd creatures polka",
     thumbnail: "pokemon1",
@@ -44,6 +50,7 @@ let games = [
     inCart: 0,
   },
   {
+    id: 6,
     title: "Grand Left Auto",
     description: "You can only turn Left",
     thumbnail: "gta",
@@ -51,6 +58,7 @@ let games = [
     inCart: 0,
   },
   {
+    id: 7,
     title: "Slownic",
     description: "Battle bosses with friends while you are very slow",
     thumbnail: "sonic",
@@ -145,9 +153,13 @@ function getCart() {
       </div>
       <div class="price">$${item.price}</div>
       <div class="quantity">
-      <i class="fas fa-arrow-circle-left"></i>
+      <div class="minus-button" onclick="changeQnty('minus', ${
+        item.id
+      })"><i class="fas fa-arrow-circle-left"></i></div>
       <span>${item.inCart}</span>
-      <i class="fas fa-arrow-circle-right"></i>
+      <div class="plus-button" onclick="changeQnty('plus', ${
+        item.id
+      })"><i class="fas fa-arrow-circle-right"></i></div>
       </div>
       <div class="sum">
         $${item.inCart * item.price}
@@ -165,6 +177,25 @@ function getCart() {
       </div>
     `;
   }
+}
+//Må fiksa så faen på denna her, heilt feil variablar
+function changeQnty(action, id) {
+  cartItems = cartItems.map((item) => {
+    let oldNumQnty = item.inCart;
+
+    if (item.id === id) {
+      if (action === "minus") {
+        oldNumQnty--;
+      } else if (action === "plus") {
+        oldNumQnty++;
+      }
+    }
+    return {
+      ...item,
+      gameNumber: oldNumQnty,
+    };
+  });
+  showCartNum();
 }
 
 showCartNum();
