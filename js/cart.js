@@ -4,49 +4,57 @@ let games = [
   {
     title: "Mineklaft 5",
     description: "Create mineshafts",
-    Price: "30.99",
+    thumbnail: "Mineklaft",
+    price: 30.99,
     inCart: 0,
   },
   {
     title: "Dogeface 2",
     description: "Explore the dogeface",
-    Price: "9.99",
+    thumbnail: "doge",
+    price: 9.99,
     inCart: 0,
   },
   {
     title: "Fragfrog",
     description: "Destroy everyone",
-    Price: "5.57",
+    thumbnail: "fragfrog",
+    price: 5.57,
     inCart: 0,
   },
   {
     title: "You Lose 9",
     description: "You cannot win this game",
-    Price: "20.66",
+    thumbnail: "youlose",
+    price: 20.66,
     inCart: 0,
   },
   {
     title: "Racecar sim 2",
     description: "Compete in races with your friends",
-    Price: "59",
+    thumbnail: "racecarsim",
+    price: 59,
     inCart: 0,
   },
   {
     title: "Polkamon",
     description: "Teach wierd creatures polka",
-    Price: "19.99",
+    thumbnail: "pokemon1",
+    price: 19.99,
     inCart: 0,
   },
   {
     title: "Grand Left Auto",
     description: "You can only turn Left",
-    Price: "11.99",
+    thumbnail: "gta",
+    price: 11.99,
     inCart: 0,
   },
   {
     title: "Slownic",
     description: "Battle bosses with friends while you are very slow",
-    Price: "50",
+    thumbnail: "sonic",
+    price: 50,
     inCart: 0,
   },
 ];
@@ -54,6 +62,7 @@ let games = [
 for (let i = 0; i < carts.length; i++) {
   carts[i].addEventListener("click", () => {
     cartNum(games[i]);
+    totalSum(games[i]);
   });
 }
 
@@ -104,6 +113,19 @@ function setItems(games) {
   localStorage.setItem("gamesInCart", JSON.stringify(cartItems));
 
   console.log("product in cart", cartItems);
+}
+
+function totalSum(games) {
+  let cartSum = localStorage.getItem("totalSum");
+  console.log(cartSum);
+  console.log(typeof cartSum);
+
+  if (cartSum != null) {
+    cartSum = parseInt(cartSum);
+    localStorage.setItem("totalSum", cartSum + games.price);
+  } else {
+    localStorage.setItem("totalSum", games.price);
+  }
 }
 
 showCartNum();
