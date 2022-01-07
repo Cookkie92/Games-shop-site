@@ -143,6 +143,11 @@ function getCart() {
       <span>${item.title}<span>
       </div>
       <div class="price">$${item.price}</div>
+      <div class="quantity">
+      <i class="fas fa-arrow-circle-left"></i>
+      <span>${item.inCart}</span>
+      <i class="fas fa-arrow-circle-right"></i>
+      </div>
       `;
     });
   }
