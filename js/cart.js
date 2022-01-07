@@ -148,6 +148,9 @@ function getCart() {
       <span>${item.inCart}</span>
       <i class="fas fa-arrow-circle-right"></i>
       </div>
+      <div class="sum">
+        $${item.inCart * item.price}
+      </div>
       `;
     });
   }

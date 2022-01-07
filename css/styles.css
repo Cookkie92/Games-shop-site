@@ -211,20 +211,20 @@ padding-bottom:100px;
 }
 .price{
 width:15%;
-border-bottom:4px solid green;
+border-bottom:1px solid green;
 display:flex;
 align-items:center;
 
 }
 .quantity{
 width:15%;
-border-bottom:2px solid green;
+border-bottom:1px solid green;
 display:flex;
 align-items:center;
 }
 .sum{
 width:25%;
-border-bottom: 4px solid green;
+border-bottom:1px solid green;
 display:flex;
 align-items:center;
 
