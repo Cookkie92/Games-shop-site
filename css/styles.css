@@ -404,6 +404,12 @@ align-items:center;
   width: 300px;
   border-radius: 5px;
 }
+.contact-subject{
+  padding: 20px;
+  width: 300px;
+  height:100px;
+  border-radius: 5px;
+}
 #sucess {
   display: none;
   color: green;

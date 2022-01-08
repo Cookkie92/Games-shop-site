@@ -23,11 +23,11 @@ function validateForm() {
     } else {
       subjectError.style.display = "block";
     }
-    if (checkLength(contactAdress.value, 24) === true) {
-      adressError.style.display = "none";
-    } else {
-      adressError.style.display = "block";
-    }
+    // if (checkLength(contactAdress.value, 10) === true) {
+    //   adressError.style.display = "none";
+    // } else {
+    //   adressError.style.display = "block";
+    // }
 
     if (validateEmail(email.value) === true) {
       emailError.style.display = "none";

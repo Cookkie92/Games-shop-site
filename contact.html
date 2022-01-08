@@ -46,17 +46,6 @@
         <div>
           <input
             class="contact-inputs"
-            name="subject"
-            id="subject"
-            placeholder="Subject"
-          />
-          <div class="error-form" id="subjectError">
-            Must have atlest 10 characters.
-          </div>
-        </div>
-        <div>
-          <input
-            class="contact-inputs"
             name="email"
             id="email"
             placeholder="Email"
@@ -65,13 +54,25 @@
         </div>
         <div>
           <input
+            class="contact-subject"
+            name="subject"
+            id="subject"
+            placeholder="Subject"
+          />
+          <div class="error-form" id="subjectError">
+            Must have atlest 10 characters.
+          </div>
+        </div>
+
+        <!-- <div>
+          <input
             class="contact-inputs"
             name="adress"
             id="adress"
             placeholder="Adress"
           />
-          <div class="error-form" id="adressError">25 Characters Required</div>
-        </div>
+          <div class="error-form" id="adressError"></div>
+        </div> -->
         <div class="btn-container">
           <button class="start-btn">Submit</button>
         </div>
