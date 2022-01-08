@@ -131,7 +131,7 @@ function totalSum(games, action) {
   // console.log(cartSum);
   // console.log(typeof cartSum);
   if (action == "minus") {
-    cartSum = parseInt(cartSum);
+    cartSum = parseFloat(cartSum);
     localStorage.setItem("totalSum", round(cartSum - games.price, 2));
   } else if (cartSum != null) {
     cartSum = parseFloat(cartSum);
