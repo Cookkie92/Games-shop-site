@@ -90,15 +90,14 @@ function cartNum(games, action) {
   if (action == "minus") {
     localStorage.setItem("cartNum", gameNumbers - 1);
     document.querySelector(".cart span").textContent = gameNumbers - 1;
-  }
-
-  if (gameNumbers) {
+  } else if (gameNumbers) {
     localStorage.setItem("cartNum", gameNumbers + 1);
     document.querySelector(".cart span").textContent = gameNumbers + 1;
   } else {
     localStorage.setItem("cartNum", 1);
     document.querySelector(".cart span").textContent = 1;
   }
+
   setItems(games);
 }
 
