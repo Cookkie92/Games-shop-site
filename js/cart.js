@@ -126,12 +126,14 @@ function setItems(games) {
   // console.log("product in cart", cartItems);
 }
 
-function totalSum(games) {
+function totalSum(games, action) {
   let cartSum = localStorage.getItem("totalSum");
   // console.log(cartSum);
   // console.log(typeof cartSum);
-
-  if (cartSum != null) {
+  if (action == "minus") {
+    cartSum = parseInt(cartSum);
+    localStorage.setItem("totalSum", round(cartSum - games.price, 2));
+  } else if (cartSum != null) {
     cartSum = parseFloat(cartSum);
     localStorage.setItem("totalSum", round(cartSum + games.price, 2));
   } else {
@@ -239,6 +241,7 @@ function changeQuantity() {
       if (cartItems[currentGames].inCart > 1) {
         cartItems[currentGames].inCart -= 1;
         cartNum(cartItems[currentGames], "minus");
+        totalSum(cartItems[currentGames], "minus");
         localStorage.setItem("gamesInCart", JSON.stringify(cartItems));
         getCart();
       }
@@ -251,6 +254,21 @@ function changeQuantity() {
       currentQuantity =
         plusQuantity[i].parentElement.querySelector("span").textContent;
       console.log(currentQuantity);
+
+      currentGames = minusQuantity[
+        i
+      ].parentElement.previousElementSibling.previousElementSibling
+        .querySelector("span")
+        .textContent.toLowerCase()
+        .replace(/ /g, "")
+        .trim();
+      console.log(currentGames);
+
+      cartItems[currentGames].inCart += 1;
+      cartNum(cartItems[currentGames]);
+      totalSum(cartItems[currentGames]);
+      localStorage.setItem("gamesInCart", JSON.stringify(cartItems));
+      getCart();
     });
   }
   console.log(cartItems);
