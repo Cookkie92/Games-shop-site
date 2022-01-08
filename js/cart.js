@@ -239,7 +239,7 @@ function changeQuantity() {
         .replace(/ /g, "")
         .trim();
       if (cartItems[currentGames].inCart > 1) {
-        cartItems[currentGames].inCart -= 1;
+        round((cartItems[currentGames].inCart -= 1));
         cartNum(cartItems[currentGames], "minus");
         totalSum(cartItems[currentGames], "minus");
         localStorage.setItem("gamesInCart", JSON.stringify(cartItems));
@@ -264,7 +264,7 @@ function changeQuantity() {
         .trim();
       console.log(currentGames);
 
-      cartItems[currentGames].inCart += 1;
+      round((cartItems[currentGames].inCart += 1));
       cartNum(cartItems[currentGames]);
       totalSum(cartItems[currentGames]);
       localStorage.setItem("gamesInCart", JSON.stringify(cartItems));
