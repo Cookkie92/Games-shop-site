@@ -5,7 +5,7 @@ let games = [
     id: 0,
     title: "Mineklaft 5",
     description: "Create mineshafts",
-    thumbnail: "Mineklaft",
+    thumbnail: "mineklaft5",
     price: 30.99,
     inCart: 0,
   },
@@ -13,7 +13,7 @@ let games = [
     id: 1,
     title: "Dogeface 2",
     description: "Explore the dogeface",
-    thumbnail: "doge",
+    thumbnail: "dogeface2",
     price: 9.99,
     inCart: 0,
   },
@@ -29,7 +29,7 @@ let games = [
     id: 3,
     title: "You Lose 9",
     description: "You cannot win this game",
-    thumbnail: "youlose",
+    thumbnail: "youlose9",
     price: 20.66,
     inCart: 0,
   },
@@ -37,7 +37,7 @@ let games = [
     id: 4,
     title: "Racecar sim 2",
     description: "Compete in races with your friends",
-    thumbnail: "racecarsim",
+    thumbnail: "racecarsim2",
     price: 59,
     inCart: 0,
   },
@@ -45,7 +45,7 @@ let games = [
     id: 5,
     title: "Polkamon",
     description: "Teach wierd creatures polka",
-    thumbnail: "pokemon1",
+    thumbnail: "polkamon",
     price: 19.99,
     inCart: 0,
   },
@@ -53,7 +53,7 @@ let games = [
     id: 6,
     title: "Grand Left Auto",
     description: "You can only turn Left",
-    thumbnail: "gta",
+    thumbnail: "grandleftauto",
     price: 11.99,
     inCart: 0,
   },
@@ -61,7 +61,7 @@ let games = [
     id: 7,
     title: "Slownic",
     description: "Battle bosses with friends while you are very slow",
-    thumbnail: "sonic",
+    thumbnail: "slownic",
     price: 50,
     inCart: 0,
   },
@@ -141,25 +141,23 @@ function getCart() {
   cartItems = JSON.parse(cartItems);
   let cartContainer = document.querySelector(".games");
   let cartSum = localStorage.getItem("totalSum");
-  console.log(cartItems);
+
+  // console.log(cartItems);
+
   if (cartItems && cartContainer) {
     cartContainer.innerHTML = "";
     Object.values(cartItems).map((item) => {
       cartContainer.innerHTML += `
       <div class="game">
-      <i class="fas fa-ban"></i>
+      <a href="#"> <i class="fas fa-ban"></i></a>
       <img class="cart-pic" src="/Images/${item.thumbnail}.jpg">
       <span>${item.title}<span>
       </div>
       <div class="price">$${item.price}</div>
       <div class="quantity">
-      <div class="minus-button" onclick="changeQnty('minus', ${
-        item.id
-      })"><i class="fas fa-arrow-circle-left"></i></div>
+      <a href="#"><i class="fas fa-arrow-circle-left" id=""></i></a>
       <span>${item.inCart}</span>
-      <div class="plus-button" onclick="changeQnty('plus', ${
-        item.id
-      })"><i class="fas fa-arrow-circle-right"></i></div>
+      <a href="#"><i class="fas fa-arrow-circle-right"></i></a>
       </div>
       <div class="sum">
         $${item.inCart * item.price}
@@ -177,25 +175,41 @@ function getCart() {
       </div>
     `;
   }
+  removeGame();
 }
-//Må fiksa så faen på denna her, heilt feil variablar
-function changeQnty(action, inCart) {
-  cartItems = cartItems.map((item) => {
-    let oldNumQnty = item.inCart;
 
-    if (item.inCart === inCart) {
-      if (action === "minus") {
-        oldNumQnty--;
-      } else if (action === "plus") {
-        oldNumQnty++;
-      }
-    }
-    return {
-      ...item,
-      inCart: oldNumQnty,
-    };
-  });
+function removeGame() {
+  let removeGameBtn = document.querySelectorAll(".game a");
+  let gameName;
+  for (let i = 0; i < removeGameBtn.length; i++) {
+    removeGameBtn[i].addEventListener("click", () => {
+      gameName = removeGameBtn[i].parentElement.textContent
+        .trim()
+        .toLowerCase()
+        .replace(/ /g, "");
+      console.log(gameName);
+    });
+  }
 }
+
+//Må fiksa så faen på denna her, heilt feil variablar
+// function changeQnty(action, inCart) {
+//   cartItems = cartItems.map((item) => {
+//     let oldNumQnty = item.inCart;
+
+//     if (item.inCart === inCart) {
+//       if (action === "minus") {
+//         oldNumQnty--;
+//       } else if (action === "plus") {
+//         oldNumQnty++;
+//       }
+//     }
+//     return {
+//       ...item,
+//       inCart: oldNumQnty,
+//     };
+//   });
+// }
 
 showCartNum();
 getCart();
