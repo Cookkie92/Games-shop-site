@@ -92,13 +92,13 @@ function cartNum(games, action) {
     document.querySelector(".cart span").textContent = gameNumbers - 1;
   }
 
-  // if (gameNumbers) {
-  //   localStorage.setItem("cartNum", gameNumbers + 1);
-  //   document.querySelector(".cart span").textContent = gameNumbers + 1;
-  // } else {
-  //   localStorage.setItem("cartNum", 1);
-  //   document.querySelector(".cart span").textContent = 1;
-  // }
+  if (gameNumbers) {
+    localStorage.setItem("cartNum", gameNumbers + 1);
+    document.querySelector(".cart span").textContent = gameNumbers + 1;
+  } else {
+    localStorage.setItem("cartNum", 1);
+    document.querySelector(".cart span").textContent = 1;
+  }
   setItems(games);
 }
 
