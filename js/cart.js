@@ -87,18 +87,18 @@ function cartNum(games, action) {
   let cartItems = localStorage.getItem("gamesInCart");
   cartItems = JSON.parse(cartItems);
 
-  if ((action = "minus")) {
+  if (action == "minus") {
     localStorage.setItem("cartNum", gameNumbers - 1);
     document.querySelector(".cart span").textContent = gameNumbers - 1;
   }
 
-  if (gameNumbers) {
-    localStorage.setItem("cartNum", gameNumbers + 1);
-    document.querySelector(".cart span").textContent = gameNumbers + 1;
-  } else {
-    localStorage.setItem("cartNum", 1);
-    document.querySelector(".cart span").textContent = 1;
-  }
+  // if (gameNumbers) {
+  //   localStorage.setItem("cartNum", gameNumbers + 1);
+  //   document.querySelector(".cart span").textContent = gameNumbers + 1;
+  // } else {
+  //   localStorage.setItem("cartNum", 1);
+  //   document.querySelector(".cart span").textContent = 1;
+  // }
   setItems(games);
 }
 
