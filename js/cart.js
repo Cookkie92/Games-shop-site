@@ -157,7 +157,7 @@ function getCart() {
       <a href="#"><i class="fas fa-arrow-circle-right"></i></a>
       </div>
       <div class="sum">
-        $${item.inCart * item.price}
+        $${round(item.inCart * item.price, 2)}
       </div>
       `;
     });
@@ -191,8 +191,6 @@ function removeGame() {
         .trim()
         .toLowerCase()
         .replace(/ /g, "");
-      // console.log(gameName);
-      // console.log(cartItems[gameName].title + " " + cartItems[gameName].inCart);
       localStorage.setItem("cartNum", gameNumbers - cartItems[gameName].inCart);
 
       localStorage.setItem(
@@ -210,25 +208,6 @@ function removeGame() {
     });
   }
 }
-
-//Må fiksa så faen på denna her, heilt feil variablar
-// function changeQnty(action, inCart) {
-//   cartItems = cartItems.map((item) => {
-//     let oldNumQnty = item.inCart;
-
-//     if (item.inCart === inCart) {
-//       if (action === "minus") {
-//         oldNumQnty--;
-//       } else if (action === "plus") {
-//         oldNumQnty++;
-//       }
-//     }
-//     return {
-//       ...item,
-//       inCart: oldNumQnty,
-//     };
-//   });
-// }
 
 showCartNum();
 getCart();
