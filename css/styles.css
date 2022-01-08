@@ -23,7 +23,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  background: linear-gradient( #111836, #582fe0, #111836);
+  /* background: linear-gradient( #111836, #582fe0, #111836); */
   font-family: "Ubuntu", sans-serif;
 }
 .logo {
@@ -432,7 +432,7 @@ footer {
 }
 .console-logo {
   max-width: 300px;
-  max-height: 40px;
+  max-height: 30px;
   margin-top: 0.1px;
 }
 
