@@ -313,70 +313,36 @@ align-items:center;
   font-weight: bold;
   margin-top: auto;
 }
-/*knapp for profil contact etc // må byttes ut*/
+/*login btn*/
 .submit-btn {
-  width: 85%;
-  padding: 10px 30px;
-  cursor: pointer;
+  width: 250px;
+  padding: 10px;
   display: block;
   margin: 10px auto;
-  outline: none;
-  border-radius: 30px;
-  background: rgb(53, 139, 53);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  border: 1px white solid;
+  letter-spacing:2px;
+  transition:0.5s;
+  border-radius: 8px;
+  background: linear-gradient( #13151d, #12502f, #111836);
+  color: rgb(240, 226, 226);
   font-weight: bold;
   text-align:center;
+}
+.submit-btn:hover {
+  color: rgb(207, 32, 169);
+  letter-spacing: 6px;
+  text-transform:uppercase;
 }
 
 
 
 /*Login/account creation*/
-.login {
-  height: 100%;
-  width: 100%;
-}
-.login-box {
-  width: 380px;
-  height: 480px;
-  position: relative;
-  margin: 6% auto;
-  background: rgb(223, 223, 223);
-  padding: 5px;
-}
 
-.main-creatacc {
-  color: rgb(22, 22, 22);
-  font-family: "Ubuntu", sans-serif;
-}
 .input-group {
-  top: 50px;
-  position: absolute;
-  width: 280px;
+  margin-top:40px;
   transition: 0.5s;
 }
-.input-field {
-  width: 100%;
-  padding: 10px 0;
-  margin: 5px 0;
-  margin: 5px 0;
-  border-left: 0;
-  border-top: 0;
-  border-right: 0;
-  border-bottom: 1px solid #999;
-  outline: none;
-  background: transparent;
-}
 
-.check-box {
-  margin: 30px 10px 30px 0;
-}
-/*flytte form til mid*/
-#register {
-  left: 50px;
-}
+
 
 /*Contact form*/
 .error-form {
@@ -390,7 +356,7 @@ align-items:center;
   max-width: 550px;
   align-items: center;
   margin: 0 auto;
-  padding: 190px;
+  padding: 100px;
   border-radius: 20px;
 }
 #contactForm {

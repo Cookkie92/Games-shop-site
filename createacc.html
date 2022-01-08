@@ -33,52 +33,70 @@
         </ul>
       </nav>
     </header>
-    <main class="main-creatacc">
+    <main>
       <h1 class="headline-text">Create Account</h1>
-      <div class="login">
-        <div class="login-box">
-          <div class="button-box"></div>
-          <form id="register" class="input-group">
-            User information:
-            <input
-              type="text"
-              class="input-field"
-              placeholder="User Id"
-              required
-            />
-            <input
-              type="email"
-              class="input-field"
-              placeholder="Email Id"
-              required
-            />
-            <input
-              type="text"
-              class="input-field"
-              placeholder="Enter Password"
-              required
-            />
-            Payment method:
-            <input
-              type="text"
-              class="input-field"
-              placeholder="xxxx.xxxx.xxxx.xxxx"
-              required
-            />
-            <input
-              type="text"
-              class="input-field"
-              placeholder="xx.xx.xxxx"
-              required
-            />
-            <input type="text" class="input-field" placeholder="xxx" required />
-            <input type="checkbox" class="check-box" /><span
-              >I agree to the terms & conditions
-            </span>
-            <p><a class="submit-btn" href="profile.html"> Register </a></p>
-          </form>
+
+      <form id="contactForm" class="input-group">
+        <h5>User information:</h5>
+        <div>
+          <input
+            class="contact-inputs"
+            name="userid"
+            id="userid"
+            placeholder="User id"
+          />
+          <div class="error-form" id="nameError">Required</div>
         </div>
-      </div>
+        <div>
+          <input
+            name="email"
+            id="email"
+            class="contact-inputs"
+            placeholder="Email Id"
+          />
+          <div class="error-form" id="nameError">Required</div>
+        </div>
+        <div>
+          <input
+            class="contact-inputs"
+            name="password"
+            id="password"
+            placeholder="Enter Password"
+          />
+          <div class="error-form" id="nameError">Required</div>
+        </div>
+        <h5>Payment method:</h5>
+        <div>
+          <input
+            class="contact-inputs"
+            name="credit"
+            id="creditcardnumber"
+            placeholder="xxxx.xxxx.xxxx.xxxx"
+          />
+          <div class="error-form" id="nameError">Required</div>
+        </div>
+        <div>
+          <input
+            class="contact-inputs"
+            name="password"
+            id="password"
+            placeholder="xx.xx.xxxx"
+          />
+          <div class="error-form" id="nameError">Required</div>
+        </div>
+
+        <div>
+          <input
+            class="contact-inputs"
+            name="password"
+            id="password"
+            placeholder="xxx"
+          />
+          <div class="error-form" id="nameError">Required</div>
+        </div>
+        <a class="submit-btn" href="profile.html"> Register </a>
+      </form>
+      <form id="register" class="input-group"></form>
     </main>
     <footer>
       <div>
