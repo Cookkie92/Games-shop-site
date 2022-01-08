@@ -141,6 +141,7 @@ function getCart() {
   cartItems = JSON.parse(cartItems);
   let cartContainer = document.querySelector(".games");
   let cartSum = localStorage.getItem("totalSum");
+  let gameNumbers = localStorage.getItem("cartNum");
 
   // console.log(cartItems);
 
@@ -167,6 +168,7 @@ function getCart() {
 
     cartContainer.innerHTML += `
     <div class="totalSumContainer">
+    <h4>${gameNumbers}</h4>
       <h4 class="totalSumText">
       Total Sum: </h4>
       <h4 class="totalSum">
@@ -181,6 +183,9 @@ function getCart() {
 function removeGame() {
   let removeGameBtn = document.querySelectorAll(".game a");
   let gameName;
+  let gameNumbers = localStorage.getItem("cartNum");
+  let cartItems = localStorage.getItem("gamesInCart");
+  console.log(cartItems);
   for (let i = 0; i < removeGameBtn.length; i++) {
     removeGameBtn[i].addEventListener("click", () => {
       gameName = removeGameBtn[i].parentElement.textContent
@@ -188,6 +193,8 @@ function removeGame() {
         .toLowerCase()
         .replace(/ /g, "");
       console.log(gameName);
+
+      localStorage.setItem("cartNum", gameNumbers);
     });
   }
 }
