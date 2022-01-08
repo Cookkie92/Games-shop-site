@@ -2,7 +2,6 @@ let carts = document.querySelectorAll(".add-cart");
 
 let games = [
   {
-    id: 0,
     title: "Mineklaft 5",
     description: "Create mineshafts",
     thumbnail: "mineklaft5",
@@ -10,7 +9,6 @@ let games = [
     inCart: 0,
   },
   {
-    id: 1,
     title: "Dogeface 2",
     description: "Explore the dogeface",
     thumbnail: "dogeface2",
@@ -18,7 +16,6 @@ let games = [
     inCart: 0,
   },
   {
-    id: 2,
     title: "Fragfrog",
     description: "Destroy everyone",
     thumbnail: "fragfrog",
@@ -26,7 +23,6 @@ let games = [
     inCart: 0,
   },
   {
-    id: 3,
     title: "You Lose 9",
     description: "You cannot win this game",
     thumbnail: "youlose9",
@@ -34,7 +30,6 @@ let games = [
     inCart: 0,
   },
   {
-    id: 4,
     title: "Racecar sim 2",
     description: "Compete in races with your friends",
     thumbnail: "racecarsim2",
@@ -42,7 +37,6 @@ let games = [
     inCart: 0,
   },
   {
-    id: 5,
     title: "Polkamon",
     description: "Teach wierd creatures polka",
     thumbnail: "polkamon",
@@ -50,7 +44,6 @@ let games = [
     inCart: 0,
   },
   {
-    id: 6,
     title: "Grand Left Auto",
     description: "You can only turn Left",
     thumbnail: "grandleftauto",
@@ -58,7 +51,6 @@ let games = [
     inCart: 0,
   },
   {
-    id: 7,
     title: "Slownic",
     description: "Battle bosses with friends while you are very slow",
     thumbnail: "slownic",
@@ -72,6 +64,10 @@ for (let i = 0; i < carts.length; i++) {
     cartNum(games[i]);
     totalSum(games[i]);
   });
+}
+//runder av
+function round(value, decimals) {
+  return Number(Math.round(value + "e" + decimals) + "e-" + decimals);
 }
 
 function showCartNum() {
@@ -103,36 +99,36 @@ function setItems(games) {
   cartItems = JSON.parse(cartItems);
 
   if (cartItems != null) {
-    if (cartItems[games.title] == undefined) {
+    if (cartItems[games.thumbnail] == undefined) {
       cartItems = {
         ...cartItems,
-        [games.title]: games,
+        [games.thumbnail]: games,
       };
     }
-    cartItems[games.title].inCart += 1;
+    cartItems[games.thumbnail].inCart += 1;
   } else {
     games.inCart = 1;
 
     cartItems = {
-      [games.title]: games,
+      [games.thumbnail]: games,
     };
   }
 
   localStorage.setItem("gamesInCart", JSON.stringify(cartItems));
 
-  console.log("product in cart", cartItems);
+  // console.log("product in cart", cartItems);
 }
 
 function totalSum(games) {
   let cartSum = localStorage.getItem("totalSum");
-  console.log(cartSum);
-  console.log(typeof cartSum);
+  // console.log(cartSum);
+  // console.log(typeof cartSum);
 
   if (cartSum != null) {
     cartSum = parseFloat(cartSum);
-    localStorage.setItem("totalSum", cartSum + games.price);
+    localStorage.setItem("totalSum", round(cartSum + games.price, 2));
   } else {
-    localStorage.setItem("totalSum", games.price);
+    localStorage.setItem("totalSum", round(games.price, 2));
   }
 }
 
@@ -185,16 +181,32 @@ function removeGame() {
   let gameName;
   let gameNumbers = localStorage.getItem("cartNum");
   let cartItems = localStorage.getItem("gamesInCart");
+  cartItems = JSON.parse(cartItems);
+  let cartSum = localStorage.getItem("totalSum");
   console.log(cartItems);
+
   for (let i = 0; i < removeGameBtn.length; i++) {
     removeGameBtn[i].addEventListener("click", () => {
       gameName = removeGameBtn[i].parentElement.textContent
         .trim()
         .toLowerCase()
         .replace(/ /g, "");
-      console.log(gameName);
+      // console.log(gameName);
+      // console.log(cartItems[gameName].title + " " + cartItems[gameName].inCart);
+      localStorage.setItem("cartNum", gameNumbers - cartItems[gameName].inCart);
 
-      localStorage.setItem("cartNum", gameNumbers);
+      localStorage.setItem(
+        "totalSum",
+        round(
+          cartSum - cartItems[gameName].price * cartItems[gameName].inCart,
+          2
+        )
+      );
+
+      delete cartItems[gameName];
+      localStorage.setItem("gamesInCart", JSON.stringify(cartItems));
+      getCart();
+      showCartNum();
     });
   }
 }
