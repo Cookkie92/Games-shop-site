@@ -156,7 +156,7 @@ function getCart() {
       cartContainer.innerHTML += `
       <div class="game">
       <a href="#"> <i class="fas fa-ban"></i></a>
-      <img class="cart-pic" src="/Images/${item.thumbnail}.jpg">
+      <img src="/Images/${item.thumbnail}.jpg">
       <span>${item.title}<span>
       </div>
       <div class="price">$${item.price}</div>
@@ -173,7 +173,8 @@ function getCart() {
 
     cartContainer.innerHTML += `
     <div class="totalSumContainer">
-    <h4>${gameNumbers}</h4>
+    <h4 class="totalSumText">Quantity:</h4>
+    <h4 class="totalSum">${gameNumbers}</h4>
       <h4 class="totalSumText">
       Total Sum: </h4>
       <h4 class="totalSum">
