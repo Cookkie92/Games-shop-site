@@ -79,10 +79,18 @@ function showCartNum() {
 }
 
 //Legger item i local storage
-function cartNum(games) {
+function cartNum(games, action) {
   let gameNumbers = localStorage.getItem("cartNum");
 
   gameNumbers = parseInt(gameNumbers);
+
+  let cartItems = localStorage.getItem("gamesInCart");
+  cartItems = JSON.parse(cartItems);
+
+  if ((action = "minus")) {
+    localStorage.setItem("cartNum", gameNumbers - 1);
+    document.querySelector(".cart span").textContent = gameNumbers - 1;
+  }
 
   if (gameNumbers) {
     localStorage.setItem("cartNum", gameNumbers + 1);
@@ -152,9 +160,9 @@ function getCart() {
       </div>
       <div class="price">$${item.price}</div>
       <div class="quantity">
-      <a href="#"><i class="fas fa-arrow-circle-left" id=""></i></a>
+      <a class="minus" href="#"><i class="fas fa-arrow-circle-left"></i></a>
       <span>${item.inCart}</span>
-      <a href="#"><i class="fas fa-arrow-circle-right"></i></a>
+      <a class="plus" href="#"><i class="fas fa-arrow-circle-right"></i></a>
       </div>
       <div class="sum">
         $${round(item.inCart * item.price, 2)}
@@ -174,6 +182,7 @@ function getCart() {
     `;
   }
   removeGame();
+  changeQuantity();
 }
 
 function removeGame() {
@@ -183,7 +192,7 @@ function removeGame() {
   let cartItems = localStorage.getItem("gamesInCart");
   cartItems = JSON.parse(cartItems);
   let cartSum = localStorage.getItem("totalSum");
-  console.log(cartItems);
+  // console.log(cartItems);
 
   for (let i = 0; i < removeGameBtn.length; i++) {
     removeGameBtn[i].addEventListener("click", () => {
@@ -208,6 +217,44 @@ function removeGame() {
     });
   }
 }
+function changeQuantity() {
+  let minusQuantity = document.querySelectorAll(".minus");
+  let plusQuantity = document.querySelectorAll(".plus");
+  let cartItems = localStorage.getItem("gamesInCart");
+  let currentQuantity = 0;
+  let currentGames = "";
+  cartItems = JSON.parse(cartItems);
 
+  for (let i = 0; i < minusQuantity.length; i++) {
+    minusQuantity[i].addEventListener("click", () => {
+      currentQuantity =
+        minusQuantity[i].parentElement.querySelector("span").textContent;
+      console.log(currentQuantity);
+      currentGames = minusQuantity[
+        i
+      ].parentElement.previousElementSibling.previousElementSibling
+        .querySelector("span")
+        .textContent.toLowerCase()
+        .replace(/ /g, "")
+        .trim();
+      if (cartItems[currentGames].inCart > 1) {
+        cartItems[currentGames].inCart -= 1;
+        cartNum(cartItems[currentGames], "minus");
+        localStorage.setItem("gamesInCart", JSON.stringify(cartItems));
+        getCart();
+      }
+
+      console.log(currentGames);
+    });
+  }
+  for (let i = 0; i < plusQuantity.length; i++) {
+    plusQuantity[i].addEventListener("click", () => {
+      currentQuantity =
+        plusQuantity[i].parentElement.querySelector("span").textContent;
+      console.log(currentQuantity);
+    });
+  }
+  console.log(cartItems);
+}
 showCartNum();
 getCart();
