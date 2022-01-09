@@ -615,6 +615,23 @@ footer {
 }
 
 @media (max-width: 767px) {
+  .headling {
+    width: 300px;
+  }
+  .inner-result {
+    width: 300px;
+  }
+  .check-games {
+    width: 300px;
+  }
+  .logo {
+    font-size: 15px;
+  }
+  .inner-result:hover {
+    background-color: rgb(27, 15, 58);
+    transform: none;
+    transition: all 0.5s ease;
+  }
   .greet {
     display: none;
   }
@@ -626,11 +643,11 @@ footer {
     font-size: 1rem;
   }
   .best-seller {
-    height: 300px;
-    width: 450px;
+    height: 200px;
+    width: 375px;
   }
   .headline-text {
-    width: 450px;
+    width: 350px;
     margin-top: 10px;
     text-align: center;
   }
