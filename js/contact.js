@@ -5,34 +5,44 @@ const contactSubject = document.querySelector("#subject");
 const subjectError = document.querySelector("#subjectError");
 const contactEmail = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
-const contactAdress = document.querySelector("#adress");
-const adressError = document.querySelector("#adressError");
 const contactSucess = document.querySelector("#sucess");
 
 function validateForm() {
   try {
     event.preventDefault();
 
+    let nameSuccessful = false;
+    let subjectSuccessful = false;
+    let emailSuccessful = false;
+
     if (checkLength(contactName.value, 0) === true) {
       nameError.style.display = "none";
+      nameSuccessful = true;
     } else {
       nameError.style.display = "block";
+      nameSuccessful = false;
     }
     if (checkLength(contactSubject.value, 9) === true) {
       subjectError.style.display = "none";
+      subjectSuccessful = true;
     } else {
       subjectError.style.display = "block";
+      subjectSuccessful = false;
     }
-    // if (checkLength(contactAdress.value, 10) === true) {
-    //   adressError.style.display = "none";
-    // } else {
-    //   adressError.style.display = "block";
-    // }
-
     if (validateEmail(email.value) === true) {
       emailError.style.display = "none";
+      emailSuccessful = true;
     } else {
       emailError.style.display = "block";
+      emailSuccessful = false;
+    }
+    if (
+      nameSuccessful === true &&
+      subjectSuccessful === true &&
+      emailSuccessful === true
+    ) {
+      console.log("show me the way");
+      document.getElementById("sucess").style.display = "block";
     }
   } catch (error) {
     console.log("Error occured", error);
