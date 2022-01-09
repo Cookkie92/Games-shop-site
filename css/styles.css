@@ -306,6 +306,20 @@ p {
   padding: 10px;
   color: rgb(192, 71, 71);
 } */
+.minus {
+  padding: 10px;
+  color: red;
+  font-size: 20px;
+}
+.plus {
+  padding: 10px;
+  color: green;
+  font-size: 20px;
+}
+.remove {
+  color: rgb(224, 51, 51);
+  font-size: 25px;
+}
 /*Buy buttons*/
 
 .start-btn:hover {

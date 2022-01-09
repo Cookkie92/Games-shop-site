@@ -155,7 +155,7 @@ function getCart() {
     Object.values(cartItems).map((item) => {
       cartContainer.innerHTML += `
       <div class="game">
-      <a href="#"> <i class="fas fa-ban"></i></a>
+      <a class="remove" href="#"> <i class="fas fa-ban"></i></a>
       <img src="/Images/${item.thumbnail}.jpg">
       <span>${item.title}<span>
       </div>
