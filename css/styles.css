@@ -264,6 +264,7 @@ p {
   border-bottom: 1px solid green;
   display: flex;
   align-items: center;
+  font-size: 15px;
 }
 .sum {
   width: 25%;
@@ -299,6 +300,10 @@ p {
 .totalSum {
   width: 25%;
 }
+/* .fas {
+  padding: 10px;
+  color: rgb(192, 71, 71);
+} */
 /*Buy buttons*/
 
 .start-btn:hover {
