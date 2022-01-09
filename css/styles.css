@@ -249,7 +249,7 @@ p {
   max-width: 650px;
   display: flex;
   justify-content: flex-start;
-  border-bottom: 4px solid grey;
+  border-bottom: 4px solid rgb(127, 127, 129);
   margin: 0 auto;
 }
 .game-title {
@@ -257,20 +257,20 @@ p {
 }
 .price {
   width: 15%;
-  border-bottom: 1px solid green;
+  border-bottom: 1px solid rgb(127, 127, 129);
   display: flex;
   align-items: center;
 }
 .quantity {
   width: 15%;
-  border-bottom: 1px solid green;
+  border-bottom: 1px solid rgb(127, 127, 129);
   display: flex;
   align-items: center;
   font-size: 15px;
 }
 .sum {
   width: 25%;
-  border-bottom: 1px solid green;
+  border-bottom: 1px solid rgb(127, 127, 129);
   display: flex;
   align-items: center;
 }
@@ -280,7 +280,7 @@ p {
   justify-content: space-around;
   align-items: center;
   padding: 20px 0;
-  border-bottom: 1px solid green;
+  border-bottom: 1px solid rgb(127, 127, 129);
 }
 .games {
   width: 100%;
