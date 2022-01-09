@@ -73,6 +73,11 @@ nav span {
   background: url("/Images/Background1.jpg") center;
   background-size: 60% auto;
 }
+.greet2 {
+  padding: 100px;
+  background: url("/Images/headlinepic13.jpg") center;
+  background-size: 60% auto;
+}
 
 p {
   font-style: italic;
