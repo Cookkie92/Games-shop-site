@@ -165,9 +165,11 @@ function getCart() {
       <span>${item.inCart}</span>
       <a class="plus" href="#"><i class="fas fa-arrow-circle-right"></i></a>
       </div>
+      
       <div class="sum">
         $${round(item.inCart * item.price, 2)}
       </div>
+     
       `;
     });
 
@@ -185,6 +187,10 @@ function getCart() {
   }
   removeGame();
   changeQuantity();
+  purchaseGame();
+}
+function purchaseGame() {
+  let purchaseBtn = document.querySelector(".purchaseBtn");
 }
 
 function removeGame() {
