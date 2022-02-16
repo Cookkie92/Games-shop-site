@@ -1,5 +1,5 @@
 const url =
-  "https://api.rawg.io/api/games?&key=2904233664034c1da06563d6fd16478c";
+  "https://it-kk.no/doge-hub/wp-json/wc/store/products?&key=2904233664034c1da06563d6fd16478c";
 
 const resultContainer = document.querySelector(".result");
 
@@ -12,35 +12,56 @@ async function getApi() {
     const result = await response.json();
     console.log(result);
     //finding the info
-    const games = result.results;
+    const games = result;
     //displaying loader
     resultContainer.innerHTML = "";
 
-    for (let i = 0; i < games.length; i++) {
-      //counting number of tags
-      //games[i].tags.length = counts the number of tags
+    for (let i = 0; i < result.length; i++) {
+      // const pictures = result[i].images.length;
 
-      if (i === 20) {
-        //stops after 8 has been reached
-        break;
-      }
+      // console.log(pictures);
 
-      //deploying the info
       resultContainer.innerHTML += `
       <div class ="result">
-      <a href="details.html?id=${games[i].id}">
+      <a href="details.html?id=${result[i].id}">
       <div class = "inner-result">
-       
-        <img class="image" src="${games[i].background_image}"  alt="thumbnail">
-        <h3 class="logo">${games[i].name}</h3>
-        <p>Price: ${games[i].rating} Doge</p>
-        
+
+        <img class="image" src="${result[i].images[0].thumbnail}"  alt="thumbnail">
+        <h3 class="logo">${result[i].name}</h3>
+        <p>Price: ${result[i].prices.price} Kr</p>
+
          </div>
          </a>
       </div>
-      
+
       `;
     }
+
+    // for (let i = 0; i < result.length; i++) {
+    //   //counting number of tags
+    //   //games[i].tags.length = counts the number of tags
+
+    //   if (i === 20) {
+    //     //stops after 8 has been reached
+    //     break;
+    //   }
+
+    //   //deploying the info
+    //   resultContainer.innerHTML += `
+    //   <div class ="result">
+    //   <a href="details.html?id=${games[i].id}">
+    //   <div class = "inner-result">
+
+    //     <img class="image" src="${games[i].background_image}"  alt="thumbnail">
+    //     <h3 class="logo">${games[i].name}</h3>
+    //     <p>Price: ${games[i].rating} Doge</p>
+
+    //      </div>
+    //      </a>
+    //   </div>
+
+    //   `;
+    // }
 
     // catching error
   } catch (error) {
