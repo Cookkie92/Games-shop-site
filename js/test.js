@@ -1,5 +1,5 @@
 const url =
-  "https://it-kk.no/doge-hub/wp-json/wc/store/products?&key=2904233664034c1da06563d6fd16478c";
+  "https://it-kk.no/doge-hub/wp-json/wc/store/products?&key=ck_8bdf87d21f21819edb087d365fa147ad85718e4b";
 
 const resultContainer = document.querySelector(".result");
 
