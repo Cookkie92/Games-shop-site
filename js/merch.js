@@ -1,5 +1,4 @@
-const url =
-  "https://it-kk.no/doge-hub/wp-json/wc/store/products?&key=ck_8bdf87d21f21819edb087d365fa147ad85718e4b";
+const url = "https://it-kk.no/doge-hub/wp-json/wc/store/products?";
 
 const resultContainer = document.querySelector(".result");
 
@@ -8,8 +7,7 @@ async function getApi() {
     const response = await fetch(url);
 
     const result = await response.json();
-    console.log(result);
-    const games = result;
+    // console.log(result);
     resultContainer.innerHTML = "";
 
     for (let i = 0; i < result.length; i++) {
