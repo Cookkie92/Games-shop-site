@@ -34,7 +34,8 @@ function createHtml(results) {
         <h3 class="logo">${results.name}</h3>
         <h4>Description:</h4>
          ${results.description}
-         <p>Price:${results.prices.price}</p>
+         <p>Price: ${results.prices.price} KR</p>
+         <a class="add-cart" href="#">Add to cart</a>
           
       </div>
       `;

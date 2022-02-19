@@ -226,6 +226,40 @@ p {
   padding: 20px;
 }
 
+/*Details page*/
+
+.details-result {
+  margin: 30px;
+  padding: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: rgb(206, 206, 231);
+}
+.details-image {
+  width: 30%;
+}
+
+/*Loading*/
+
+.loading {
+  border: 10px solid rgb(116, 106, 207);
+  border-top: 10px solid rgb(205, 21, 211);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite alternate;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /*Cart css*/
 
 .cart-container {
@@ -311,6 +345,25 @@ p {
   font-size: 25px;
 }
 /*buttons*/
+
+.call-to-arms {
+  background: linear-gradient(#d166ec, #ca22ca, #c86ef1);
+  color: rgb(246, 246, 248);
+  text-decoration: none;
+  padding: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  display: inline-block;
+  font-weight: bold;
+  margin-top: auto;
+}
+.call-to-arms:hover {
+  color: rgb(28, 12, 250);
+  letter-spacing: 6px;
+}
 
 .start-btn:hover {
   color: rgb(207, 32, 169);
@@ -673,6 +726,9 @@ footer {
     max-width: 300px;
   }
   .image {
+    max-width: 300px;
+  }
+  .details-image {
     max-width: 300px;
   }
   .index.image {
